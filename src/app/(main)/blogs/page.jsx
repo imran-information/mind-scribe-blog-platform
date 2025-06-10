@@ -26,14 +26,8 @@ const BlogsPage = () => {
         search: searchQuery
     })
     const { data: featuredPost, isLoading: featuredPostIsLoading } = useGetFeaturedPostQuery()
-
-    const formatDate = (dateString) => {
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-        })
-    }
+ 
+    console.log('all blogs', posts)
 
     const allTags = [...new Set(posts?.flatMap(post => post.tags) || [])]
     const indexOfLastPost = currentPage * postsPerPage
@@ -139,7 +133,7 @@ const BlogsPage = () => {
                             </p>
                             <div className="flex items-center justify-between">
                                 <Link
-                                    href={`/post/${featuredPost?._id}`}
+                                    href={`/blogs/${featuredPost?._id}`}
                                     className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium group"
                                 >
                                     Read full story <FiArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -228,7 +222,7 @@ const BlogsPage = () => {
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <Link
-                                                href={`/blog/${post.slug}`}
+                                                href={`/blogs/${post._id}`}
                                                 className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium group"
                                             >
                                                 Read more <FiArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />

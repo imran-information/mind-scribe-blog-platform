@@ -17,7 +17,8 @@ export default function Home() {
 
   // console.log('all post ', posts)
 
-  // console.log("trending",trendingPosts) 
+  console.log("trending",trendingPosts) 
+  // console.log("featured",featuredPost) 
 
   if (isError) return <div>Error loading posts</div>;
 
@@ -102,7 +103,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6">
                     <Link
-                      href={`/posts/${featuredPost._id}`}
+                      href={`/blogs/${featuredPost._id}`}
                       className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                     >
                       Read full story <FiArrowRight className="ml-2" />
@@ -157,7 +158,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="text-sm font-medium text-foreground">
-                          <Link href={`/posts/${post._id}`} className="hover:text-primary">
+                          <Link href={`/blogs/${post._id}`} className="hover:text-primary">
                             {post.title}
                           </Link>
                         </h3>
@@ -203,7 +204,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="text-sm font-medium text-foreground">
-                          <Link href={`/posts/${post._id}`} className="hover:text-primary">
+                          <Link href={`/blogs/${post._id}`} className="hover:text-primary">
                             {post.title}
                           </Link>
                         </h3>

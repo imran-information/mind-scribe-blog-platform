@@ -5,7 +5,7 @@ import { FiCalendar, FiClock } from 'react-icons/fi'
 export const BlogCard = ({ post }) => {
     return (
         <div key={post._id} className="bg-background rounded-lg shadow-sm border border-muted overflow-hidden hover:shadow-md transition-shadow">
-            <Link href={`/posts/${post._id}`}>
+            <Link href={`/blogs/${post._id}`}>
                 <img
                     className="w-full h-48 object-cover"
                     src={post.image || '/placeholder-post.jpg'}

@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 
 const uri = process.env.MONGODB_URI;
-console.log("Mongo URI:", uri);
+// console.log("Mongo URI:", uri);
 const options = {};
 
 let client;

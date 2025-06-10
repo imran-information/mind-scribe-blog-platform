@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET(request) {
     try {
         const client = await clientPromise;
-        const db = client.db("mind-scribe");
+        const db = client.db("ai-blog-platform");
         const url = new URL(request.url);
         const search = url.searchParams.get('search') || '';
 
