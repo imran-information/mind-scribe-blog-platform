@@ -4,6 +4,10 @@ import { useGetPostByIdQuery } from '@/app/features/apiSlice';
 import Image from 'next/image'; 
 import { FaHeart, FaEye, FaCalendarAlt, FaUser } from 'react-icons/fa';
 
+
+
+
+
 export default function BlogDetailsClient({ id }) {
     const { data: blog, error, isLoading } = useGetPostByIdQuery(id);
 
